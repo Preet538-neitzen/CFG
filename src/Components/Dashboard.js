@@ -141,7 +141,7 @@ export class Dashboard extends Component {
                 
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                    <div class="col-lg-6 col-md-6 mt-4 pt-2">
                         <div class="blog position-relative overflow-hidden shadow rounded">
                             <div class="position-relative">
                                 <img src="images\blog\01.jpg" class="img-fluid rounded-top" alt=""/>
@@ -151,10 +151,6 @@ export class Dashboard extends Component {
                                 <h4><a href="/UserSignIn" class="title text-dark">User Sign In</a></h4>
                                 <div class="post-meta mt-3">
                                     <a href="javascript:void(0)" class="text-muted float-right readmore">Read More <i class="mdi mdi-chevron-right"></i></a>
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                        <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                    </ul>
                                 </div>
                             </div>
                             <div class="author">
@@ -164,20 +160,16 @@ export class Dashboard extends Component {
                         </div>
                     </div>
                     
-                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                    <div class="col-lg-6 col-md-6 mt-4 pt-2">
                         <div class="blog position-relative overflow-hidden shadow rounded">
                             <div class="position-relative">
                                 <img src="images\blog\02.jpg" class="img-fluid rounded-top" alt=""/>
                                 <div class="overlay rounded-top bg-dark"></div>
                             </div>
                             <div class="content p-4">
-                                <h4><a href="javascript:void(0)" class="title text-dark">Intern Sign In</a></h4>
+                                <h4><a href="/AdminSignIn" class="title text-dark">Admin Sign In</a></h4>
                                 <div class="post-meta mt-3">
                                     <a href="javascript:void(0)" class="text-muted float-right readmore">Read More <i class="mdi mdi-chevron-right"></i></a>
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                        <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                    </ul>
                                 </div>
                             </div>
                             <div class="author">
@@ -187,28 +179,7 @@ export class Dashboard extends Component {
                         </div>
                     </div>
                     
-                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                        <div class="blog position-relative overflow-hidden shadow rounded">
-                            <div class="position-relative">
-                                <img src="images\blog\03.jpg" class="img-fluid rounded-top" alt=""/>
-                                <div class="overlay rounded-top bg-dark"></div>
-                            </div>
-                            <div class="content p-4">
-                                <h4><a href="javascript:void(0)" class="title text-dark">Co-Founder Sign In</a></h4>
-                                <div class="post-meta mt-3">
-                                    <a href="javascript:void(0)" class="text-muted float-right readmore">Read More <i class="mdi mdi-chevron-right"></i></a>
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                        <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="author">
-                                <small class="text-light user d-block"><i class="mdi mdi-account"></i> This tab is for Donors to LogIn</small>
-                               
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>

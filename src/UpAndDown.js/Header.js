@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class Header extends Component {
     render() {
@@ -8,7 +9,9 @@ export class Header extends Component {
             <div class="container">
            
                 <div>
-                    <a class="logo" href="index.html">CFG<span class="text-primary">.</span></a>
+                <Link to="/">
+                        <a class="logo" href="index.html">CFG<span class="text-primary">.</span></a>
+                    </Link>
                 </div>                 
                 <div class="buy-button">
                     <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">{this.props.name}</a>

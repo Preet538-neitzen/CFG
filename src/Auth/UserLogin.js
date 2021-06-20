@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import fire from '.././Config/Config'
 import firebase from 'firebase/app'
 import Header from '.././UpAndDown.js/Header'
+import Locationcomponent from '../Components/UserDashboard'
 
 export class UserLogin extends Component {
     constructor(props){
@@ -34,6 +35,7 @@ export class UserLogin extends Component {
           nulledState:false,
           errorMessage:'',
           VerificationCode:'',
+          loading: true,
         }
         this.handleChangeEmail = this.handleChangeEmail.bind(this)
         this.handleChangePass = this.handleChangePass.bind(this);
@@ -122,6 +124,7 @@ export class UserLogin extends Component {
           fire.auth().onAuthStateChanged((user) => {
          
             if (user) {
+              this.setState({loading: false})
               this.setState({ user });
               var user = firebase.auth().currentUser;
               var name, email, photoUrl, uid, emailVerified,data;
@@ -310,27 +313,10 @@ export class UserLogin extends Component {
     render() {
         return (
             <div>
-                {this.state.user?(<> <Header name={this.state.user.displayName}/>
-                  <section class="bg-half-170" id="home">
-            <div class="home-center">
-                <div class="home-desc-center">
-                    <div class="container">
-                        <div class="row position-relative align-items-center pt-4">
-                            <div class="col-lg-7 offset-lg-5">
-                                <div class="title-heading studio-home bg-white shadow mt-5">
-                                    <h1 class="heading mb-3">Present Your Work With <span class="text-primary">CFG</span> </h1>
-                                    <p class="para-desc text-muted">CFG.</p>
-                                    <div class="mt-4">
-                                        <a href="" class="btn btn-primary mt-2 mr-2"><i class="mdi mdi-phone"></i> Welcome</a>
-                                        <a  href="" class="btn btn-outline-primary mt-2"><i class="mdi mdi-book-outline"></i>Feature </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </section>
+
+            {this.state.user?
+                (<> <Header name={this.state.user.displayName}/>
+                  <Locationcomponent/>
                  <button style={{paddingTop:'100p'}} class="btn btn-outline-primary m-3 mb-4" onClick={this.logout}>Logout</button> </>):(<>  <section class="bg-home">
             <div class="home-center">
                 <div class="home-desc-center">
@@ -397,6 +383,8 @@ export class UserLogin extends Component {
                 </div>
             </div>
         </section></>)}
+
+               
           
             </div>
         )

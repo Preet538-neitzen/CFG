@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import fire from '.././Config/Config'
 import firebase from 'firebase/app'
 import Header from '../UpAndDown.js/Header'
-import Locationcomponent from '../Components/UserDashboard'
-import UserNavbar from '../NavBar/UserNav'
+import AdminDashboard from '../Components/AdminDashboard'
 
 export class UserSignIn extends Component {
     constructor(props){
@@ -13,7 +12,7 @@ export class UserSignIn extends Component {
           email: '',
           password: '',
           username:'',
-          LastName:'',
+          LastName:'',  
           PhoneNumber:'',
           valueToBePassed:'',
           text:'',
@@ -328,13 +327,12 @@ export class UserSignIn extends Component {
                 {this.state.user?(<> 
                 
                 {/* User Dashboard */}
-                <UserNavbar/>
-
+                
 
 
                 {this.state.user.emailVerified?(<>  
-
-                    <Locationcomponent/>
+                    <h2>Welcome to Admin Sign Up</h2>
+                    <AdminDashboard/>
 
 
                  <button style={{paddingTop:'100p'}} class="btn btn-outline-primary m-3 mb-4" onClick={this.logout}>Logout</button></>):(<><div class="form-group" style={{paddingTop:'200px'}}>
